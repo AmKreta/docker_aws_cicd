@@ -1,0 +1,19 @@
+services:
+  service1:
+    build:
+      context: ./service1
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - /src/app/service1/node_modules
+      - ./service1:/src/app/service1
+  service2:
+    build:
+      context: ./service2
+      dockerfile: Dockerfile      
+    ports:
+      - "8001:8000"
+    volumes:
+      - /src/app/service2/node_modules
+      - ./service2:/src/app/service2
