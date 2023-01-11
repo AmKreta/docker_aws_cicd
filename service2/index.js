@@ -3,7 +3,7 @@ const express=require("express");
 const app=express();
 
 app.get('/',(req,res)=>{
-    res.json({success:true, message:"response from service 2"})
+    res.json({success:true, message:"response from service 2 testing cicd"})
 });
 
 app.listen(8000,()=>{
